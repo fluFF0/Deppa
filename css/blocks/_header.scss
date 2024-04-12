@@ -1,0 +1,127 @@
+.header {
+  position: relative;
+  background: url("../../img/headerBackground.png") center;
+  height: 1007px;
+
+  @include mobile{
+    padding-top: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile{
+      display: flex;
+      justify-content: stretch;
+      gap: 20px;
+      padding: 0 20px;
+    }
+  }
+  &__logo {
+    @include mobile{
+      width: 100px;
+    }
+  }
+  &__menu {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      @include desktop {
+        gap: 40px;
+      }
+    }
+    &-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 80px;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+    }
+  }
+  &__button-list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 600;
+
+    @include desktop {
+      gap: 10px;
+    }
+    @include mobile {
+      margin-left: auto;
+    }
+
+    &-item {
+      color: var(--color-white);
+    }
+  }
+  &__center{
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 184px;
+      height: 116px;
+      position: absolute;
+      left: 43%;
+      top: 46%;
+      background-color: rgba(187, 139, 250, 0.34);
+      border-radius: var(--border-radius-normal);
+      color: var(--color-black);
+      font-size: 16px;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.5
+      }
+      @include tablet {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+      }
+      @include mobile{
+        position: fixed;
+        left: 30%;
+        top: 50%;
+      }
+    }
+  }
+}
+.button {
+  border: none;
+  background-color: inherit;
+  color: var(--color-white);
+}
+.button-youtube {
+  position: relative;
+  &::before {
+    content: url("../../img/youtube.svg");
+    position: absolute;
+    left:-30px;
+    top: 3px;
+  }
+}

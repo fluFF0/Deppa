@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang=ru>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/">
+    <title>Deppa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__inner container">
+        <a href="/" class="header__logo">
+            <img src="/img/logo.svg" alt="Deppa" class="logo__image"
+            width="155px" height="36" loading="lazy">
+        </a>
+        <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="/" class="header__menu-link">Каталог</a></li>
+                <li class="header__menu-item"><a href="/" class="header__menu-link">Для бизнеса</a></li>
+                <li class="header__menu-item"><a href="/" class="header__menu-link">Контакты</a></li>
+            </ul>
+        </nav>
+        <ul class="header__button-list">
+            <li class="header__button-item">
+                <button class="button-youtube button" type="button">Обзоры</button>
+            </li>
+            <li class="header__button-item">
+                <button class="button-like button" type="button">
+                    <img src="img/like.svg" alt="like" width="18" height="17" loading="lazy">
+                </button>
+            </li>
+            <li class="header__button-item">
+                <button class="button-search button" type="button">
+                    <img src="img/search.svg" alt="search" width="18" height="18" loading="lazy">
+                </button>
+            </li>
+        </ul>
+        <button class="button__burger-menu burger-button visible-mobile" onclick="mobileOverlay.showModal()">
+            <span class="visually-hidden">Open navigation menu</span>
+        </button>
+    </div>
+    <div class="header__center">
+    <a href="/" class="header__center-link">Видео</a>
+    </div>
+</header>
+<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form  class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+            <span class="visually-hidden">Close navigation Menu</span>
+        </button>
+    </form>
+    <div class="mobile-overlay__body">
+        <ul class="menu-overlay__list">
+            <li class="menu-overlay__item"><a href="/" class="menu-overlay__link">Каталог</a></li>
+            <li class="menu-overlay__item"><a href="/" class="menu-overlay__link">Для бизнеса</a></li>
+            <li class="menu-overlay__item"><a href="/" class="menu-overlay__link">Контакты</a></li>
+        </ul>
+    </div>
+</dialog>
+</body>
+</html>

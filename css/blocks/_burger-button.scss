@@ -1,0 +1,79 @@
+.burger-button {
+  @include reset-button;
+  @include square(48px);
+
+  position: relative;
+  border-radius: var(--border-radius-normal);
+  @include hover {
+   background-color:rgba(255, 255, 255, 0.5);
+  }
+
+  &::after {
+    @include abs-center;
+
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 -8px var(--color-white), 0 8px var(--color-white);
+  }
+}
+
+.mobile-overlay {
+  width: 100%;
+  height: 100%;
+  border:none;
+  margin: 0;
+
+  &__close-button-wrapper {
+    display: flex;
+    justify-content: end;
+  }
+}
+.mobile-overlay__body{
+  display: flex;
+  justify-content: center;
+.menu-overlay__list {
+  @include flex-center(true);
+  flex-direction: column;
+  row-gap: 50px;
+  min-height: 20vh;
+}
+}
+
+.cross-button {
+  @include reset-button;
+  @include square(48px);
+
+  position: relative;
+  border-radius: 5px;
+  @include hover {
+    background-color:rgba(255, 255, 255, 0.5);
+  }
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    width: 70%;
+    height: 2px;
+    background-color: var(--color-black);
+    border-radius: 5px;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+
+}
+dialog:modal {
+  max-width: 100%;
+  max-height: 100%;
+}
